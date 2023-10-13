@@ -30,5 +30,6 @@
     "constructor": "   Constructor",
     "value": "  Value",
     "enumMember": "   Enum Member"
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
