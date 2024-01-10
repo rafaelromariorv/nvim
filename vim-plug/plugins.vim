@@ -27,8 +27,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 	" nav
+	
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
-
+	Plug 'nvim-lua/plenary.nvim'
 	" terminal
 	Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
