@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-flutter', 'coc-yank', 'coc-tslint-plugin', 'coc-snippets', 'coc-svelte', 'coc-python', 'coc-word', 'coc-pyright']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-flutter', 'coc-yank', 'coc-tslint-plugin', 'coc-snippets', 'coc-svelte', 'coc-word', 'coc-python', 'coc-pyright']
 
 " Mappings Go To's
 nmap <silent> gd <Plug>(coc-definition)
@@ -42,3 +42,5 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+
