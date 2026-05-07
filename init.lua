@@ -12,6 +12,10 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true        
 vim.opt.termguicolors = true    
 
+vim.opt.foldmethod = "indent"  
+vim.opt.foldlevel = 99         
+vim.opt.foldenable = true      
+vim.opt.foldcolumn = "1"
 -- ========================================================================== --
 --                             GESTOR DE PLUGINS                              --
 -- ========================================================================== --
@@ -32,8 +36,9 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter", 
     build = ":TSUpdate",
     config = function()
-      local status, ts = pcall(require, "nvim-treesitter.configs")
-      if status then
+      -- Usamos pcall para evitar que Neovim lance el error si el plugin no cargó
+      local ok, ts = pcall(require, "nvim-treesitter.configs")
+      if ok then
         ts.setup({
           ensure_installed = { "lua", "python", "javascript", "html", "css" },
           highlight = { enable = true },
@@ -41,6 +46,7 @@ require("lazy").setup({
       end
     end
   },
+
 
   -- Terminal Integrada
   {
